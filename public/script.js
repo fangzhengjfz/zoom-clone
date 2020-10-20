@@ -1,10 +1,13 @@
 const socket = io("/");
 const videoGrid = document.getElementById("video-grid");
+
+// change port to 3030 when ran locally
 const myPeer = new Peer(undefined, {
   path: "/peerjs",
   host: "/",
-  port: "3030",
+  port: "443",
 });
+
 let myVideoStream;
 const myVideo = document.createElement("video");
 myVideo.muted = true;
